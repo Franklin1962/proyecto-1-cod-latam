@@ -10,13 +10,17 @@
 */
 
 /* Reset */
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     /* Para que el scrolleo en la one page sea suave */
     scroll-behavior: smooth;
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif sans-serif;
 }
+
+
 
 /* Para quitar los puntos a los items de listas */
 ul {
@@ -34,36 +38,39 @@ a {
 body {
     background-color: #fbfbfb;
     font-size: 18px;
+    line-height: 1.2;  
 }
 
 header {
-    text-align:18 px;
-    display: flexbox;
-    width: 90px;
-
+    display: flex;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+    border-bottom: groove 3px #f0f0f0 ;
 }
 
-header figure img{
-    width: 100px;
-    height: 100px;
+.logo{
+    display: flex;
+}
+
+.logo img{
     border-radius: 50%;
-    
+    height: 70px;
+    width: 70px;
 }
 
-header nav{
-    float: right;
+header nav a{
+    font-weight: 600;
+    padding: 15px;
 }
-header nav a {
-    margin: 30px;
-    width: 20px;
-    
+nav a:hover{
+    color: #af599b;
+    box-shadow: 5px 15px 15px rgba(0,0,0,-35)
 }
 
-/* #menu ul li
- *   margin: 30px;
- *  float: right;
- *
-*/
 /* Este max-width es para que el contenido no se "estire" demasiado hacia los costados y
 *  el margin: auto; para tenerlo centrado fácilmente ;)
 */
@@ -72,25 +79,38 @@ main {
     margin: auto;
 }
 
-
 #nicio{
+    display: flex;
     min-width: 100vh;
     align-items: center;
     justify-content: center;
     margin-top: 20px;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #0f0f0f;
 }
 
-#inicio figure img{
-    border-radius: 50%;
-    width: 180px;
-    height: 180px;
+#inicio figure{
+    display: flex;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 40px;
+}
+
+#inicio img{
+    border-radius: 50%;
+    width: 400px;
+    justify-content: center;
+    align-items: center; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
 } 
 
-p{
-    justify-content: center;
-    align-items:center ;
+#inicio p{
+    display: flex;
+    text-align: center ;
     color: #0f0f0f;
 }
 
@@ -102,46 +122,172 @@ h1{
 }
 
 .descarga{
-    height: 5vh;
+    height: 6vh;
     display: flex;
-    width: 180px;
+    width: 190px;
     justify-content: center;  
     align-items: center;
     background-color: #af599b;
     border-radius: 300px;
     color: #fbfbfb;
     font-size: 20px;
-    margin-left: 200px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 30px;
+    margin-bottom: 160px;
+    box-shadow: 5px 15px 15px rgba(0,0,0,-35);
+    transition: .3s ease;
+}
+div.descarga a:hover{
+    padding: 25px;
+    border: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    transform:translate (-3px) scale(1.05);
+    box-shadow: 0 0 157px rgb(202, 94, 112),
+                0 0 45px rgb(202, 94, 112),
+                0 0 75px rgb(202, 94, 112),
+                0 0 115px rgb(202, 94, 112);
+
 }
 
 #contacto{
-    
-    height: 25vh;
-    display: flex; 
+    min-height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    height: 65vh;
+    display: flexbox ; 
+    border-radius: 10px;
     background-color:rgba(175,89,158,0.3);
     color: #0f0f0f;
+    margin-top: 30px;
+    padding: 30px;
+    
 }
-
-#contacto p{
-    font-size: 20px;
+#contacto p{   
+    display: flex;
+    text-align: center;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px; 
+    padding: 4px;
+}
+
+.titulo{
+    text-align: center;
+    justify-content: center;
+    font-size: 28px;
+}
+
+#contacto .fa-house{
+    display: flex;
+    color: blue;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+
+#contacto .fa-phone{
+    display: flex;
+    color:  cornflowerblue;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+#contacto .fa-whatsapp{
+display: flex;
+    color: rgb(17, 207, 17);
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.rs{
+    display: flex;
+    height: 20vh;
     justify-content: center;
     align-items: center;
     text-align: center;
-    
-}
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    color:darkblue ;
+    transform: translate(-50,-50);
+}  
 
-div h2{
-    font-size: 28px;
+.rs ul li{
+    display: inline-block ;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    padding: 20px;
 }
 
+.rs u li a i{
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 10px rgba(0,0,0,-25);
+    transition: .3s ease;
 
+
+}
+footer{
+    height: 90px;
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    background-color: #af599b;
+    color: #fbfbfb;
+    text-align:center;
+    padding: 30px;
+}
+
+:root{
+    --email: #e4405f;
+    --linkedin: #007785;
+    --github: #1a61e6;
+}
+
+.rs ul li a{
+    transform: translate3d (-3px) scale(1.05);
+    box-shadow: 0 5px 5px 10px white;
+    border-radius: 10px;
+}
+
+.rs ul li .email:hover{
+    background: var(--email);
+    box-shadow: 0 0 15px var(--email),
+                0 0 45px var(--email),
+                0 0 75px var(--email),
+                0 0 115px var(--email);
+
+}
+
+.rs ul li .github:hover{
+    background: var(--github);
+    color: pink;
+    box-shadow: 0 0 15px #1a61e6,
+                0 0 45px #1a61e6,
+                0 0 75px #1a61e6,
+                0 0 115px #1a61e6;
+}
+.rs ul li .linkedin:hover{
+    background: var(--linkedin);
+    color: grey;
+    box-shadow: 0 0 15px #007585,
+                0 0 45px #007585,
+                0 0 75px #007585,
+                0 0 115px #007585;
+}
 
 
 /* Recomendaciones! 
